@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "description": "名前の通りの機能",
   "manifest_version": 3,
-  "action": {
-    "default_popup": "popup.html"
-  },
   "content_scripts": [
     {
       "matches": [
-        "https://twitter.com/",
-        "https://x.com/"
+        "https://twitter.com/*",
+        "https://x.com/*"
       ],
       "js": [
         "content.js"
