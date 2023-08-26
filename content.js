@@ -7,7 +7,12 @@ document.addEventListener('keydown', (e) => {
     // 入力フィールドをメインに回すのでi += 2
     for (let i = 0; i < fieldElements.length; i += 2) {
       if (document.activeElement.isEqualNode(fieldElements[i].querySelector('div[aria-label="テキストをツイート"]'))) {
-        fieldElements[i + 1].getElementsByClassName('misskey-button')[0].click();
+        try {
+          fieldElements[i + 1].getElementsByClassName('misskey-button')[0].click();
+        }
+        catch (e) {
+          console.log('Misstterの投稿ボタンをCtrl+Enterで押せるようにするやつ: 投稿ボタンの押下に失敗しました。\n' + e);
+        }
       }
     }
   }
