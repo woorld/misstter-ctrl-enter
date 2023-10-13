@@ -9,7 +9,7 @@ document.addEventListener('keydown', (e) => {
 
   // 入力フィールドをメインに回すのでi += 2
   for (let i = 0; i < fieldElements.length; i += 2) {
-    if (!document.activeElement.isEqualNode(fieldElements[i].querySelector('div[aria-label="テキストをツイート"]'))) {
+    if (!document.activeElement.isEqualNode(fieldElements[i].querySelector('textarea[aria-label="ポスト本文"]'))) {
       continue;
     }
 
